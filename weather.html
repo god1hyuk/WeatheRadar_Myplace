@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WeatheRadar_Myplace</title>
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+            integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="css/weather.css">
+    </head>
+    <body>
+
+        <div class="wrap">
+
+            <h1 class="symbol_logo">WR</h1>
+            <h1 class="text_logo">WeatheRadar</h1>
+
+            <!-- weather effects -->
+
+            <!-- sun -->
+            <div class="sun"></div>
+
+            <!-- clouds -->
+            <img src="images/cloud1.png" alt="" class="cloud1 clouds">
+            <img src="images/cloud2.png" alt="" class="cloud2 clouds">
+
+            <!-- dark clouds -->
+            <img src="images/dark_cloud1.png" alt="" class="d_cloud1 d_clouds">
+            <img src="images/dark_cloud2.png" alt="" class="d_cloud2 d_clouds">
+
+            <!-- smog (mist) -->
+            <img src="images/smog1.png" alt="" class="smog">
+            <img src="images/smog2.png" alt="" class="smog">
+            <img src="images/smog1.png" alt="" class="smog">
+            <img src="images/smog2.png" alt="" class="smog">
+
+            <!-- rain -->
+            <div class="rain"></div>
+
+            <!-- snowflakes -->
+            <div class="snowflakes" aria-hidden="true">
+                <div class="snowflake">●</div>
+                <div class="snowflake">●</div>
+                <div class="snowflake">●</div>
+                <div class="snowflake">●</div>
+                <div class="snowflake">●</div>
+                <div class="snowflake">●</div>
+                <div class="snowflake">●</div>
+                <div class="snowflake">●</div>
+                <div class="snowflake">●</div>
+                <div class="snowflake">●</div>
+            </div>
+
+            <!-- stars -->
+            <div class="stars">
+                <div class="star1 star"></div>
+                <div class="star2 star"></div>
+                <div class="star3 star"></div>
+                <div class="star4 star"></div>
+                <div class="star5 star"></div>
+                <div class="star6 star"></div>
+                <div class="star7 star"></div>
+                <div class="star8 star"></div>
+                <div class="star9 star"></div>
+            </div>
+
+            <!-- main -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <!-- weather main -->
+                        <div id="weather_main">
+                            <h1 class="city"></h1>
+                            <div class="time">
+                                <h2 class="fullDate"></h2>
+                                <h2 class="fullTime"></h2>
+                            </div>
+                            <section>
+                                <figure class="icon"></figure>
+                                <p class="w_id"></p>
+                                <p class="temp"></p>
+                            </section>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <div id="weather_sub">
+                            <div class="sub_wrap sub_wrap1">
+                                <div class="sub sub1">
+                                    <div class="sunrise sub_items">
+                                        <img src="images/sunrise_black.png" alt="sunrise">
+                                        <p></p>
+                                    </div>
+                                    <div class="sunset sub_items">
+                                        <img src="images/sunset_black.png" alt="sunset">
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="sub sub2">
+                                    <div class="temp_max sub_items">
+                                        <img src="images/temp_max.png" alt="temp_max">
+                                        <p></p>
+                                    </div>
+                                    <div class="temp_min sub_items">
+                                        <img src="images/temp_min.png" alt="temp_min">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sub_wrap sub_wrap2">
+                                <div class="sub sub3">
+                                    <div class="feelsLike sub_items">
+                                        <img src="images/feelslike_black.png" alt="feelsLike_black" class="feelsLike_black">
+                                        <img src="images/feelslike_white.png" alt="feelslike_white" class="feelsLike_white">
+                                        <p></p>
+                                    </div>
+                                    <div class="humidity sub_items">
+                                        <img src="images/humidity.png" alt="humidity">
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="sub sub4">
+                                    <div class="rainFall sub_items">
+                                        <img src="images/rainfall.png" alt="rainFall">
+                                        <p></p>
+                                    </div>
+                                    <div class="wind sub_items">
+                                        <img src="images/wind_black.png" alt="wind_black" class="wind_black">
+                                        <img src="images/wind_white" alt="wind_white" class="wind_white">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- initialization surface -->
+            <div id="bg_intro">
+                <img src="images/01d_bg.jpg" alt="bg_intro">
+            </div>
+            <!-- background color -->
+            <div id="bg"></div>
+
+            <!-- grass -->
+            <img src="images/grass1.png" alt="" class="grass1">
+            <img src="images/grass2.png" alt="" class="grass2">
+
+        </div>
+
+        <div id="weather_timezone">
+
+            <div class="hourly_tab"></div>
+
+            <div class="line"></div>
+
+            <div class="daily_wrap"></div>
+
+        </div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/swiper-bundle.min.js"></script>
+        <script src="js/weather.js"></script>
+
+    </body>
+</html>
