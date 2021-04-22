@@ -123,7 +123,7 @@ $.getJSON(url, function (data) {
   });
   
 $('#bg').html("<img src='images/" + icon + "_bg.jpg'>");
-$('#bg').html("<img src='images/" + icon + "_bg.jpg'>");
+$('#bg_intro').css('display','none');
 $('.time .fullDate').html(fullDate);
 $('.time .fullTime').html(fullTime);
 $('#weather_main>.city').html(city + '/' + country);
