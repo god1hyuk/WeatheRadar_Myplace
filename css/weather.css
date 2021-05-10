@@ -614,9 +614,12 @@ a{
     .w_id {
         font-size: 1.8rem;
     }
-    
     .temp {
         font-size: 3rem;
+    }
+
+    .sub_items > p {
+        font-size: 1.3rem;
     }
     
     .line {
