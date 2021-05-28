@@ -160,7 +160,7 @@ $.getJSON(url, function (data) {
 
     }
 
-    for (let j = 0; j <= 7; j++) {
+    for (let j = 0; j <= 5; j++) {
       let dTime = c.daily[j].dt;
       let dIcon = c.daily[j].weather[0].icon;
       let dTemp_max = c.daily[j].temp.max;
